@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkTools : AFHTTPSessionManager
-
++(instancetype)sharedManager;
 @end
 
 NS_ASSUME_NONNULL_END

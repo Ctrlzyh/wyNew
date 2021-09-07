@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HeadLine : NSObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *imgsrc;
 
++(instancetype)headlineWithDic:(NSDictionary *)dic;
++(void)headlinesWithSuccess:(void(^)(NSArray *array))success error:(void(^)(void))error;
 @end
 
 NS_ASSUME_NONNULL_END
