@@ -8,17 +8,24 @@
 #import "FunctionViewController.h"
 #import "XLCycleCollectionView.h"
 #import "HeadLine.h"
+#import "News.h"
 
-@interface FunctionViewController ()
+@interface FunctionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSArray *headlines;
 @property (nonatomic,strong)XLCycleCollectionView *cyleView;
+@property (nonatomic,strong)NSArray *newsList;
 @end
 
 @implementation FunctionViewController
 
 -(void)setHeadlines:(NSArray *)headlines{
     self.cyleView.data = headlines;
+    [self.tableView reloadData];
+}
+
+-(void)setNewsList:(NSArray *)newsList{
+    _newsList = newsList;
     [self.tableView reloadData];
 }
 
@@ -32,12 +39,14 @@
 -(void)createUI{
     self.cyleView = [[XLCycleCollectionView alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 200)];
     
-//    self.cyleView.data = @[@"Hello",@"world",@"!"];
-//    self.cyleView.data = self.headlines;
+    //    self.cyleView.data = @[@"Hello",@"world",@"!"];
+    //    self.cyleView.data = self.headlines;
     self.cyleView.autoPage = YES;
-//    [self.view addSubview:cyleView];
+    //    [self.view addSubview:cyleView];
     [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = self.cyleView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 -(void)initData{
@@ -46,6 +55,12 @@
         self.headlines = array;
     } error:^{
         NSLog(@"--2-->");
+    }];
+    [News newsListWithSuccessBlock:^(NSArray * _Nonnull array) {
+        self.newsList = array;
+        NSLog(@"--3-->%@",array);
+    } errorBlock:^(NSError * _Nonnull error) {
+        NSLog(@"--4-->%@",error);
     }];
 }
 
@@ -57,14 +72,19 @@
     
     return _tableView;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.newsList.count;
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     NSString *CellIdentifier = [NSString stringWithFormat:@"Cell"];
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     if (cell == nil) {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+         News *new =  self.newsList[indexPath.row];
+         cell.textLabel.text =new.title;
+     };
+     return cell;
+}
 @end

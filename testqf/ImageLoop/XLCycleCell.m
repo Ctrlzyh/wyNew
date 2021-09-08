@@ -33,6 +33,7 @@
     self.textLabel = [[UILabel alloc] init];
 //    self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:14];
+    self.textLabel.backgroundColor= [UIColor whiteColor];
     [self addSubview:self.textLabel];
     [_textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_imgsrcView.mas_left).offset(10);

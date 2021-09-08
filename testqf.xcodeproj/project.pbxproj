@@ -10,6 +10,7 @@
 		7771237353BAD20109477406 /* Pods_testqf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E437C7094DA7E38508D820 /* Pods_testqf.framework */; };
 		BC86028126E6166000233133 /* XLCycleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86027E26E6166000233133 /* XLCycleCollectionView.m */; };
 		BC86028226E6166000233133 /* XLCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86027F26E6166000233133 /* XLCycleCell.m */; };
+		BC86028926E8573400233133 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86028826E8573400233133 /* News.m */; };
 		BCDB40D326DF6A7B00E35F37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDB40D226DF6A7B00E35F37 /* AppDelegate.m */; };
 		BCDB40D626DF6A7B00E35F37 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDB40D526DF6A7B00E35F37 /* SceneDelegate.m */; };
 		BCDB40D926DF6A7B00E35F37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDB40D826DF6A7B00E35F37 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		BC86027E26E6166000233133 /* XLCycleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCycleCollectionView.m; sourceTree = "<group>"; };
 		BC86027F26E6166000233133 /* XLCycleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCycleCell.m; sourceTree = "<group>"; };
 		BC86028026E6166000233133 /* XLCycleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCycleCell.h; sourceTree = "<group>"; };
+		BC86028726E8573400233133 /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		BC86028826E8573400233133 /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		BCDB40CE26DF6A7B00E35F37 /* testqf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testqf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDB40D126DF6A7B00E35F37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCDB40D226DF6A7B00E35F37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +144,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC86028626E8570E00233133 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				BC86028726E8573400233133 /* News.h */,
+				BC86028826E8573400233133 /* News.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		BCDB40C526DF6A7B00E35F37 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		BCDB40D026DF6A7B00E35F37 /* testqf */ = {
 			isa = PBXGroup;
 			children = (
+				BC86028626E8570E00233133 /* News */,
 				BCDB411326E0B89000E35F37 /* ImageLoop */,
 				BCDB410F26E0B46F00E35F37 /* Tools */,
 				BCDB40D126DF6A7B00E35F37 /* AppDelegate.h */,
@@ -469,6 +482,7 @@
 			files = (
 				BCDB410E26DF726A00E35F37 /* FunctionViewController.m in Sources */,
 				BCDB40D926DF6A7B00E35F37 /* ViewController.m in Sources */,
+				BC86028926E8573400233133 /* News.m in Sources */,
 				BCDB40D326DF6A7B00E35F37 /* AppDelegate.m in Sources */,
 				BC86028226E6166000233133 /* XLCycleCell.m in Sources */,
 				BCDB40E426DF6A7C00E35F37 /* main.m in Sources */,

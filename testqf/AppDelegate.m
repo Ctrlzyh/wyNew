@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "FunctionViewController.h"
 #import "HomeViewController.h"
+#import <AFNetworkActivityIndicatorManager.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:1024*1024*5 diskCapacity:1024*1024*10 diskPath:@"images"];
+    [NSURLCache setSharedURLCache:cache];
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    ViewController *controller = [[ViewController alloc] init];
