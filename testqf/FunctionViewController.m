@@ -9,6 +9,7 @@
 #import "XLCycleCollectionView.h"
 #import "HeadLine.h"
 #import "News.h"
+#import "NewsCellTableViewCell.h"
 
 @interface FunctionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
@@ -78,13 +79,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-     NSString *CellIdentifier = [NSString stringWithFormat:@"Cell"];
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     NSString *CellIdentifier = [NSString stringWithFormat:@"news"];
+    NewsCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
      if (cell == nil) {
-         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-         News *new =  self.newsList[indexPath.row];
-         cell.textLabel.text =new.title;
+         cell = [[[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:nil options:nil] lastObject];
      };
+    cell.news = self.newsList[indexPath.row];
      return cell;
+}
+
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 80;
+//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
 }
 @end
