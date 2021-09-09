@@ -23,7 +23,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lya-S8-lsL">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xer-ov-NG4">
+                        <rect key="frame" x="13" y="10" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="obG-tX-tqC"/>
+                            <constraint firstAttribute="height" constant="60" id="zzh-9M-dOZ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lya-S8-lsL">
                         <rect key="frame" x="13" y="10" width="80" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="qGB-jE-mdR"/>
@@ -48,6 +55,8 @@
                     <constraint firstItem="sjs-07-Qvx" firstAttribute="leading" secondItem="Lya-S8-lsL" secondAttribute="trailing" constant="15" id="Ihu-ps-jwg"/>
                     <constraint firstAttribute="trailing" secondItem="Aah-tA-Bu0" secondAttribute="trailing" constant="20" id="NaM-D8-oKw"/>
                     <constraint firstAttribute="trailing" secondItem="2Wa-r4-uZ4" secondAttribute="trailing" constant="8" id="ZsN-ql-s2J"/>
+                    <constraint firstItem="Xer-ov-NG4" firstAttribute="top" secondItem="oCD-Ut-r10" secondAttribute="top" constant="10" id="mUP-bJ-GFh"/>
+                    <constraint firstItem="Xer-ov-NG4" firstAttribute="leading" secondItem="oCD-Ut-r10" secondAttribute="leading" constant="13" id="p2N-RM-ojU"/>
                     <constraint firstItem="Aah-tA-Bu0" firstAttribute="leading" secondItem="sjs-07-Qvx" secondAttribute="leading" id="p4Q-gz-8i5"/>
                     <constraint firstAttribute="bottom" secondItem="2Wa-r4-uZ4" secondAttribute="bottom" constant="10" id="pHC-Q1-A9D"/>
                     <constraint firstItem="Aah-tA-Bu0" firstAttribute="top" secondItem="sjs-07-Qvx" secondAttribute="bottom" constant="8" symbolic="YES" id="uHQ-3s-wwG"/>
@@ -57,6 +66,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9Is-hd-sTB"/>
             <connections>
+                <outlet property="defaultImg" destination="Xer-ov-NG4" id="Mbk-rF-j7W"/>
                 <outlet property="digestView" destination="Aah-tA-Bu0" id="GOF-ak-1vn"/>
                 <outlet property="imgsrcView" destination="Lya-S8-lsL" id="izx-GB-Zed"/>
                 <outlet property="replyCount" destination="2Wa-r4-uZ4" id="V3j-Vz-Pox"/>
