@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *digest;
 @property (nonatomic,copy) NSString *replyCount;
 @property (nonatomic,copy) NSString *imgsrc;
+@property (nonatomic,copy) NSString *docid;
 
 +(instancetype)newWithDic:(NSDictionary *)dic;
 +(void)newsListWithSuccessBlock:(void(^)(NSArray *array))successBlock errorBlock:(void(^)(NSError *error))errorBlock;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7771237353BAD20109477406 /* Pods_testqf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E437C7094DA7E38508D820 /* Pods_testqf.framework */; };
+		BC6F3FE626F076030084B333 /* NewsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6F3FE526F076030084B333 /* NewsDetail.m */; };
 		BC86028126E6166000233133 /* XLCycleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86027E26E6166000233133 /* XLCycleCollectionView.m */; };
 		BC86028226E6166000233133 /* XLCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86027F26E6166000233133 /* XLCycleCell.m */; };
 		BC86028926E8573400233133 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = BC86028826E8573400233133 /* News.m */; };
@@ -54,6 +55,8 @@
 		62CDDF1DAAC2434D822F838B /* Pods-testqf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testqf.debug.xcconfig"; path = "Target Support Files/Pods-testqf/Pods-testqf.debug.xcconfig"; sourceTree = "<group>"; };
 		64996DBFBBB907CF1CAF2761 /* Pods-testqf-testqfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testqf-testqfUITests.debug.xcconfig"; path = "Target Support Files/Pods-testqf-testqfUITests/Pods-testqf-testqfUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B27979EF9D1DFB3A6A2B4F7E /* Pods_testqfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testqfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6F3FE426F076030084B333 /* NewsDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetail.h; sourceTree = "<group>"; };
+		BC6F3FE526F076030084B333 /* NewsDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetail.m; sourceTree = "<group>"; };
 		BC86027D26E6166000233133 /* XLCycleCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCycleCollectionView.h; sourceTree = "<group>"; };
 		BC86027E26E6166000233133 /* XLCycleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCycleCollectionView.m; sourceTree = "<group>"; };
 		BC86027F26E6166000233133 /* XLCycleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCycleCell.m; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				BC86028A26E89B2100233133 /* NewsCell.xib */,
 				BC86028C26E8A0A200233133 /* NewsCellTableViewCell.h */,
 				BC86028D26E8A0A200233133 /* NewsCellTableViewCell.m */,
+				BC6F3FE426F076030084B333 /* NewsDetail.h */,
+				BC6F3FE526F076030084B333 /* NewsDetail.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				BCDB410B26DF717400E35F37 /* HomeViewController.m in Sources */,
 				BCDB411226E0B4AD00E35F37 /* NetworkTools.m in Sources */,
 				BCDB40D626DF6A7B00E35F37 /* SceneDelegate.m in Sources */,
+				BC6F3FE626F076030084B333 /* NewsDetail.m in Sources */,
 				BCDB411626E0B8BD00E35F37 /* HeadLine.m in Sources */,
 				BCDB411926E0CFCA00E35F37 /* HeadLineCell.m in Sources */,
 				BC86028126E6166000233133 /* XLCycleCollectionView.m in Sources */,
